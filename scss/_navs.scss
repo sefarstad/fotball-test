@@ -1,0 +1,52 @@
+
+
+.top-nav {
+	@include row();
+	ul {
+		list-style: none;
+		float: right;
+		li {
+			float: left;
+			padding-right: $marg-sides;
+		}
+	}
+}
+
+
+header {
+	background: $blue;
+	color: white;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	padding: 0.5em;
+	@include row();
+
+	.logo {
+		@include span-columns(2);
+		img {
+			max-width: 80px;
+		}
+	}
+	.search {
+		@include span-columns(6);
+		@include media($small){
+	        @include span-columns(8);
+	    }
+	}
+	.quick-links {
+		@include span-columns(4);
+		@include omega();
+		@include media($small){
+	        @include span-columns(8);
+	    }
+	}
+}
+
+footer {
+	background: $blue;
+	color: white;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	padding: 0.5em;
+	@include row();
+}

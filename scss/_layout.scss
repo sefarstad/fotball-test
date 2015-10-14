@@ -1,0 +1,42 @@
+body {
+	padding: 0 0.5em;
+}
+.content {
+	$visual-grid: true;
+}
+
+.content, nav, header section, hr{
+	@include outer-container(1024px);
+}
+
+.content{
+	article {
+		@include span-columns(4);
+	}
+}
+
+
+.first-row article{
+    @include media($xtrasmall){
+        @include span-columns(4);
+    }
+}
+.second-row article{
+    @include media($medium){
+        @include span-columns(4);
+    }
+}
+.second-row article:nth-child(2){
+	@include media($medium){
+		@include omega();
+	}
+}
+
+hr {
+	margin: 2em auto;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
