@@ -1,9 +1,6 @@
 body {
 	padding: 0 0.5em;
 }
-.content {
-	$visual-grid: true;
-}
 
 .content, nav, header section, hr{
 	@include outer-container(1024px);
@@ -34,6 +31,8 @@ body {
 
 hr {
 	margin: 2em auto;
+	border-bottom: 1px solid $light-gray;
+	border-top: none;
 }
 
 img {

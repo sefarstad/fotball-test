@@ -1,7 +1,8 @@
 body {
 	font-family: "Gotham", "Arial", sans-serif;
 	font-size: 16px;
-	line-height: 1.5;
+	font-weight: 300;
+	line-height: 24px;
 	color: $black;
 	@include media($medium){
 		font-size: 14px;
@@ -30,7 +31,7 @@ h2 {
 }
 h3 {
 	font-size: 1.3em;
-	line-height: 1.4;
+	line-height: 1.4em;
 }
 h4 {
 	font-size: 1em;
@@ -41,9 +42,7 @@ h5 {
 
 a {
 	color: $blue;
-	font-weight: 500;
 	@include transition(all $trans-time ease-in-out);
-	text-decoration: none;
 }
 a:hover {
 	color: $red;
@@ -54,7 +53,13 @@ a:focus {
 }
 
 .small-text {
-	font-size: 0.83em;
+	font-size: 0.875em;
+}
+
+.lead {
+	font-size: 1.875em;
+	line-height: 1.3em;
+	font-weight: 200;
 }
 
 .right-text {
