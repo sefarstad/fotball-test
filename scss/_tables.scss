@@ -1,0 +1,40 @@
+.table-test {
+	.small-text {
+		display: none;
+		@include media($small) {
+		display: block;
+		}
+	}
+}
+.table-wrap {
+	position: relative;
+}
+table {
+	font-size: 0.83em;
+	width: 100%;
+	position: relative;
+	overflow: scroll;
+	td {
+		padding: 0.4em 0.7em;
+		border: 1px solid $light-gray;
+	}
+	tr:nth-of-type(2n+2){
+		background: #f8f8f8;
+	}
+	@include media($small) {
+		max-width: 100%;
+		display: block;	
+	}
+}
+.fader{
+	display: none;
+	width: 4em;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	@include linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+	top: 0;
+	@include media($small) {
+		display: block;
+	}
+}
