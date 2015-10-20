@@ -1,7 +1,7 @@
 .table-test {
 	.small-text {
 		display: none;
-		@include media($small) {
+		@include media($medium) {
 		display: block;
 		}
 	}
@@ -18,12 +18,37 @@ table {
 		padding: 0.4em 0.7em;
 		border: 1px solid $light-gray;
 	}
-	tr:nth-of-type(2n+2){
-		background: #f8f8f8;
+	tbody {
+		tr:nth-of-type(2n+1){
+			background: #f8f8f8;
+		}
+		tr:hover, tbody tr:nth-of-type(2n+1):hover, tr:hover a, tbody tr:nth-of-type(2n+1):hover a {
+			background: $blue;
+			color: white;
+		}
 	}
-	@include media($small) {
+	@include media($medium) {
 		max-width: 100%;
 		display: block;	
+	}
+	tr {
+		@include transition(all $trans-time ease-in-out);
+	}
+	thead {
+		font-weight: 500;
+	}
+	.borderBottomDotted {
+		border-bottom: 1px dashed $cool-gray;
+		td {
+			border-bottom: none;
+		}
+	}
+	.borderBottomHeavy {
+		border-bottom: 2px solid $cool-gray;
+		border-top: none;
+		td {
+			border-top: none;
+		}
 	}
 }
 .fader{
@@ -34,7 +59,7 @@ table {
 	right: 0;
 	@include linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
 	top: 0;
-	@include media($small) {
+	@include media($medium) {
 		display: block;
 	}
 }

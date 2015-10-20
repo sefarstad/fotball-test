@@ -136,6 +136,9 @@ h4 {
 h5 {
   font-size: 0.875em; }
 
+header h3 {
+  font-weight: 500; }
+
 a {
   color: #00205B;
   -webkit-transition: all 0.1s ease-in-out;
@@ -160,9 +163,19 @@ a:focus {
 .right-text {
   text-align: right; }
 
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
 .table-test .small-text {
   display: none; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     .table-test .small-text {
       display: block; } }
 
@@ -177,12 +190,30 @@ table {
   table td {
     padding: 0.4em 0.7em;
     border: 1px solid #DDDDDD; }
-  table tr:nth-of-type(2n+2) {
+  table tbody tr:nth-of-type(2n+1) {
     background: #f8f8f8; }
-  @media screen and (max-width: 640px) {
+  table tbody tr:hover, table tbody tbody tr:nth-of-type(2n+1):hover, table tbody tr:hover a, table tbody tbody tr:nth-of-type(2n+1):hover a {
+    background: #00205B;
+    color: white; }
+  @media screen and (max-width: 768px) {
     table {
       max-width: 100%;
       display: block; } }
+  table tr {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; }
+  table thead {
+    font-weight: 500; }
+  table .borderBottomDotted {
+    border-bottom: 1px dashed #737378; }
+    table .borderBottomDotted td {
+      border-bottom: none; }
+  table .borderBottomHeavy {
+    border-bottom: 2px solid #737378;
+    border-top: none; }
+    table .borderBottomHeavy td {
+      border-top: none; }
 
 .fader {
   display: none;
@@ -194,9 +225,16 @@ table {
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white);
   background-image: linear-gradient(to right,rgba(255, 255, 255, 0), white);
   top: 0; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     .fader {
       display: block; } }
+
+input, button {
+  border-radius: 4px;
+  padding: 0.594em; }
+
+input {
+  border: 1px solid #737378; }
 
 .top-nav {
   display: block; }
@@ -219,7 +257,7 @@ header {
   color: white;
   margin-left: -0.5em;
   margin-right: -0.5em;
-  padding: 0.5em;
+  padding: 2em 0.5em;
   display: block; }
   header::after {
     clear: both;
@@ -229,18 +267,59 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 14.70196%; }
+    width: 6.17215%; }
     header .logo:last-child {
       margin-right: 0; }
     header .logo img {
       max-width: 80px; }
+    @media screen and (max-width: 640px) {
+      header .logo {
+        float: left;
+        display: block;
+        margin-right: 3.57866%;
+        width: 100%;
+        text-align: center; }
+        header .logo:last-child {
+          margin-right: 0; } }
   header .search {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 57.35098%;
+    padding: 0.5em 2em 0 0; }
     header .search:last-child {
       margin-right: 0; }
+    header .search input {
+      color: #131313; }
+    header .search label {
+      display: block; }
+    header .search div {
+      width: 100%;
+      height: 2.5em; }
+    header .search div button, header .search div input {
+      float: left;
+      display: block; }
+    header .search div input {
+      width: 100%;
+      padding-right: 2.5em; }
+    header .search div button {
+      margin-left: -2.5em;
+      height: 2.5em;
+      width: 2.5em;
+      border: 1px solid #00205B;
+      border-radius: 0;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+      border-left-width: 2px;
+      background: white;
+      color: #00205B;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
+      margin-right: 0; }
+    header .search div button:hover {
+      background: #C8102E;
+      color: white; }
     @media screen and (max-width: 640px) {
       header .search {
         float: left;
@@ -250,6 +329,8 @@ header {
         header .search:last-child {
           margin-right: 0; } }
   header .quick-links {
+    padding-left: 2em;
+    border-left: 1px solid white;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -262,9 +343,13 @@ header {
         float: left;
         display: block;
         margin-right: 3.57866%;
-        width: 100%; }
+        width: 100%;
+        border-left: 0;
+        border-top: 1px solid white; }
         header .quick-links:last-child {
           margin-right: 0; } }
+    header .quick-links h3 {
+      margin-top: 0.5em; }
 
 footer {
   background: #00205B;
