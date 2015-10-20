@@ -1,9 +1,6 @@
 body {
 	padding: 0 0.5em;
 }
-.content {
-	$visual-grid: true;
-}
 
 .content, nav, header section, hr{
 	@include outer-container(1024px);
@@ -14,8 +11,6 @@ body {
 		@include span-columns(4);
 	}
 }
-
-
 .first-row article{
     @include media($xtrasmall){
         @include span-columns(4);
@@ -34,8 +29,9 @@ body {
 
 hr {
 	margin: 2em auto;
+	border-bottom: 1px solid $light-gray;
+	border-top: none;
 }
-
 img {
 	width: 100%;
 	height: auto;

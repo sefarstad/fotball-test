@@ -12,32 +12,82 @@
 	}
 }
 
+nav ul a {
+	text-decoration: none;
+}
 
 header {
 	background: $blue;
 	color: white;
 	margin-left: -0.5em;
 	margin-right: -0.5em;
-	padding: 0.5em;
+	padding: 2em 0.5em;
 	@include row();
 
 	.logo {
-		@include span-columns(2);
+		@include span-columns(1);
 		img {
 			max-width: 80px;
 		}
+		@include media($small){
+	        @include span-columns(8);
+	        text-align: center;
+	    }
 	}
 	.search {
-		@include span-columns(6);
+		@include span-columns(7);
+		padding: 0.5em 2em 0 0;
+		input {
+			color: $black;
+		}
+		label {
+			display: block;
+		}
+		div {
+			width: 100%;
+			height: $input-height;
+		}
+		div button, div input {
+			float: left;
+			display: block;
+		}
+		div input {
+			width: 100%;
+			padding-right: $input-height;
+		}
+		div button {
+			margin-left: -$input-height;
+   			@include size($input-height);
+   			border: 1px solid $blue;
+   			border-radius: 0;
+   			border-bottom-right-radius: $global-radius;
+   			border-top-right-radius: $global-radius;
+   			border-left-width: 2px;
+   			background: white;
+   			color: $blue;
+   			@include transition(all $trans-time ease-in-out);
+			@include omega();
+		}
+		div button:hover {
+			background: $red;
+			color: white;
+		}
 		@include media($small){
 	        @include span-columns(8);
 	    }
 	}
 	.quick-links {
+		padding-left: 2em;
+		border-left: 1px solid white;
 		@include span-columns(4);
 		@include omega();
 		@include media($small){
 	        @include span-columns(8);
+	        border-left: 0;
+	        border-top: 1px solid white;
+	    }
+	    h3 {
+	    	margin-top: 0.5em;
 	    }
 	}
 }
