@@ -58,10 +58,7 @@ a:focus {
 .linked-list {
 	li {
 		border-bottom: 1px solid $light-gray;
-<<<<<<< HEAD
-=======
 		@include transition(border $trans-time ease-in-out);
->>>>>>> master
 	}
 	li:hover {
 		border-color: $red;

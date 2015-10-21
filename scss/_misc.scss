@@ -1,37 +1,20 @@
-<<<<<<< HEAD
-=======
 // Lines
->>>>>>> master
 hr {
 	margin: 2em auto;
 	border-bottom: 1px solid $light-gray;
 	border-top: none;
 	  position: relative;
 }
-<<<<<<< HEAD
-
-
-hr.red-line:before {
-=======
 hr.color-line:before {
->>>>>>> master
   content: "";
   position: absolute;
   width: 30px;
   height: 10px;
-<<<<<<< HEAD
-  background: $red;
-=======
->>>>>>> master
   display: block;
   top: -1px;
   left: -1px;
 }
-<<<<<<< HEAD
-hr.red-line:after {
-=======
 hr.color-line:after {
->>>>>>> master
   content: "";
   position: absolute;
   width: 15px;
@@ -44,16 +27,11 @@ hr.color-line:after {
     -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
     transform: rotate(80deg)
 }
-<<<<<<< HEAD
-
-
-=======
 hr.color-line.light-blue-line:before {background: $light-blue;}
 hr.color-line.red-line:before {background: $red;}
 hr.color-line.green-line:before {background: $green;}
 
 //Boxes
->>>>>>> master
 .linked-boxes {
 	article {
 		background: $blue;
@@ -81,10 +59,7 @@ hr.color-line.green-line:before {background: $green;}
 	}
 }
 
-<<<<<<< HEAD
-=======
 //Images
->>>>>>> master
 img {
 	width: 100%;
 	height: auto;
