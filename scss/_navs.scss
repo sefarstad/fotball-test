@@ -91,19 +91,7 @@ header {
 		@include media($small){
 	        @include span-columns(8);
 	        border-left: 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	        padding-left: 2em;
-=======
 	        padding-left: 2.2em;
->>>>>>> master
-=======
-	        padding-left: 2.2em;
->>>>>>> master
-=======
-	        padding-left: 2.2em;
->>>>>>> master
 	        border-top: 1px solid white;
 	    }
 	    h3 {
@@ -114,18 +102,6 @@ header {
 	    }
 	}
 	.quick-links:before {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		content:"x";
-		position: absolute;
-		left: 2.4em;
-		top: 0.6em;
-=======
-=======
->>>>>>> master
-=======
->>>>>>> master
 		content:"";
 		position: absolute;
 		left: 2em;
@@ -133,13 +109,6 @@ header {
 		width: 1.3em;
 		height: 1.3em;
 		background: url("../img/star.svg");
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-=======
->>>>>>> master
 		@include media($small) {
 			left: 0.4em;
 		}
