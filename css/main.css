@@ -1,22 +1,22 @@
 /*
 Error: Invalid CSS after "...dding-left: 2em": expected "{", was ";"
-        on line 96 of scss/_navs.scss
+        on line 97 of scss/_navs.scss
         from line 15 of scss/app.scss
 
-91: 		@include media($small){
 92: 	        @include span-columns(8);
 93: 	        border-left: 0;
 94: <<<<<<< HEAD
 95: <<<<<<< HEAD
-96: 	        padding-left: 2em;
-97: =======
-98: 	        padding-left: 2.2em;
-99: >>>>>>> master
-100: =======
-101: 	        padding-left: 2.2em;
+96: <<<<<<< HEAD
+97: 	        padding-left: 2em;
+98: =======
+99: 	        padding-left: 2.2em;
+100: >>>>>>> master
+101: =======
+102: 	        padding-left: 2.2em;
 
 Backtrace:
-scss/_navs.scss:96
+scss/_navs.scss:97
 scss/app.scss:15
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
@@ -86,4 +86,4 @@ scss/app.scss:15
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...dding-left: 2em\": expected \"{\", was \";\"\A         on line 96 of scss/_navs.scss\A         from line 15 of scss/app.scss\A \A 91: 		@include media($small){\A 92: 	        @include span-columns(8);\A 93: 	        border-left: 0;\A 94: <<<<<<< HEAD\A 95: <<<<<<< HEAD\A 96: 	        padding-left: 2em;\A 97: =======\A 98: 	        padding-left: 2.2em;\A 99: >>>>>>> master\A 100: =======\A 101: 	        padding-left: 2.2em;"; }
+  content: "Error: Invalid CSS after \"...dding-left: 2em\": expected \"{\", was \";\"\A         on line 97 of scss/_navs.scss\A         from line 15 of scss/app.scss\A \A 92: 	        @include span-columns(8);\A 93: 	        border-left: 0;\A 94: <<<<<<< HEAD\A 95: <<<<<<< HEAD\A 96: <<<<<<< HEAD\A 97: 	        padding-left: 2em;\A 98: =======\A 99: 	        padding-left: 2.2em;\A 100: >>>>>>> master\A 101: =======\A 102: 	        padding-left: 2.2em;"; }
