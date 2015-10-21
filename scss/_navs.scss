@@ -19,8 +19,8 @@ nav ul a {
 header {
 	background: $blue;
 	color: white;
-	margin-left: -0.5em;
-	margin-right: -0.5em;
+	margin-left: -0.875em;
+	margin-right: -0.875em;
 	padding: 2em 0.5em;
 	@include row();
 
@@ -59,17 +59,23 @@ header {
 			margin-left: -$input-height;
    			@include size($input-height);
    			border: 1px solid $blue;
+   			text-indent: -9999px;
+   			background-image: url("../img/search_blue.svg");
+   			background-color: white;
+   			background-repeat: no-repeat;
+   			background-size: 1.4em 1.4em;
+   			background-position: center center;
    			border-radius: 0;
    			border-bottom-right-radius: $global-radius;
    			border-top-right-radius: $global-radius;
    			border-left-width: 2px;
-   			background: white;
    			color: $blue;
-   			@include transition(all $trans-time ease-in-out);
+   			@include transition(background-color $trans-time ease-in-out);
 			@include omega();
 		}
 		div button:hover {
-			background: $red;
+			background-image: url("../img/search.svg");
+			background-color: $red;
 			color: white;
 		}
 		@include media($small){
@@ -77,18 +83,49 @@ header {
 	    }
 	}
 	.quick-links {
-		padding-left: 2em;
-		border-left: 1px solid white;
+		position: relative;
+		padding-left: 4em;
+		border-left: 1px solid $semi-transparent-white;
 		@include span-columns(4);
 		@include omega();
 		@include media($small){
 	        @include span-columns(8);
 	        border-left: 0;
+<<<<<<< HEAD
+	        padding-left: 2em;
+=======
+	        padding-left: 2.2em;
+>>>>>>> master
 	        border-top: 1px solid white;
 	    }
 	    h3 {
 	    	margin-top: 0.5em;
 	    }
+	    a {
+	    	color: white;
+	    }
+	}
+	.quick-links:before {
+<<<<<<< HEAD
+		content:"x";
+		position: absolute;
+		left: 2.4em;
+		top: 0.6em;
+=======
+		content:"";
+		position: absolute;
+		left: 2em;
+		top: 0.75em;
+		width: 1.3em;
+		height: 1.3em;
+		background: url("../img/star.svg");
+>>>>>>> master
+		@include media($small) {
+			left: 0.4em;
+		}
+	}
+	 .linked-list li {
+	    border-color: $transparent-white;
 	}
 }
 

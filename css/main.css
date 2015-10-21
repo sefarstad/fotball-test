@@ -1,366 +1,83 @@
-html {
-  box-sizing: border-box; }
+/*
+Error: Invalid CSS after "...me ease-in-out)": expected "{", was ";"
+        on line 63 of scss/_type.scss
+        from line 9 of scss/app.scss
 
-*, *::after, *::before {
-  box-sizing: inherit; }
+58: .linked-list {
+59: 	li {
+60: 		border-bottom: 1px solid $light-gray;
+61: <<<<<<< HEAD
+62: =======
+63: 		@include transition(border $trans-time ease-in-out);
+64: >>>>>>> master
+65: 	}
+66: 	li:hover {
+67: 		border-color: $red;
+68: 	}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  /*margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;*/
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  padding: 0 0.5em; }
-
-.content, nav, header section, hr {
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto; }
-  .content::after, nav::after, header section::after, hr::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.content article {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .content article:last-child {
-    margin-right: 0; }
-
-@media screen and (max-width: 480px) {
-  .first-row article {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 100%; }
-    .first-row article:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 768px) {
-  .second-row article {
-    float: left;
-    display: block;
-    margin-right: 3.57866%;
-    width: 48.21067%; }
-    .second-row article:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 768px) {
-  .second-row article:nth-child(2) {
-    margin-right: 0; } }
-
-hr {
-  margin: 2em auto;
-  border-bottom: 1px solid #DDDDDD;
-  border-top: none; }
-
-img {
-  width: 100%;
-  height: auto; }
-
-body {
-  font-family: "Gotham", "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  color: #131313; }
-  @media screen and (max-width: 768px) {
-    body {
-      font-size: 14px;
-      line-height: 1.3; } }
-
-h1 a, h2 a, h3 a, h4 a, h5 a {
-  color: #131313;
-  text-decoration: none;
-  border-bottom: 1px solid white; }
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
-  color: #C8102E;
-  border-bottom: 1px solid #C8102E;
-  text-decoration: none; }
-
-h1 {
-  font-size: 2em;
-  line-height: 1.25em; }
-
-h2 {
-  font-size: 1.5em;
-  line-height: 1.35em; }
-
-h3 {
-  font-size: 1.3em;
-  line-height: 1.4em; }
-
-h4 {
-  font-size: 1em; }
-
-h5 {
-  font-size: 0.875em; }
-
-header h3 {
-  font-weight: 500; }
-
-a {
-  color: #00205B;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out; }
-
-a:hover {
-  color: #C8102E;
-  text-decoration: underline; }
-
-a:focus {
-  outline-color: #00205B; }
-
-.small-text {
-  font-size: 0.875em; }
-
-.lead {
-  font-size: 1.875em;
-  line-height: 1.3em;
-  font-weight: 200; }
-
-.right-text {
-  text-align: right; }
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-.table-test .small-text {
-  display: none; }
-  @media screen and (max-width: 768px) {
-    .table-test .small-text {
-      display: block; } }
-
-.table-wrap {
-  position: relative; }
-
-table {
-  font-size: 0.875em;
-  width: 100%;
-  position: relative;
-  overflow: scroll; }
-  table td {
-    padding: 0.4em 0.7em;
-    border: 1px solid #DDDDDD; }
-  table tbody tr:nth-of-type(2n+1) {
-    background: #f8f8f8; }
-  table tbody tr:hover, table tbody tbody tr:nth-of-type(2n+1):hover, table tbody tr:hover a, table tbody tbody tr:nth-of-type(2n+1):hover a {
-    background: #00205B;
-    color: white; }
-  @media screen and (max-width: 768px) {
-    table {
-      max-width: 100%;
-      display: block; } }
-  table tr {
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out; }
-  table thead {
-    font-weight: 500; }
-  table .borderBottomDotted {
-    border-bottom: 1px dashed #737378; }
-    table .borderBottomDotted td {
-      border-bottom: none; }
-  table .borderBottomHeavy {
-    border-bottom: 2px solid #737378;
-    border-top: none; }
-    table .borderBottomHeavy td {
-      border-top: none; }
-
-.fader {
-  display: none;
-  width: 4em;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0);
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white);
-  background-image: linear-gradient(to right,rgba(255, 255, 255, 0), white);
-  top: 0; }
-  @media screen and (max-width: 768px) {
-    .fader {
-      display: block; } }
-
-input, button {
-  border-radius: 4px;
-  padding: 0.594em; }
-
-input {
-  border: 1px solid #737378; }
-
-.top-nav {
-  display: block; }
-  .top-nav::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .top-nav ul {
-    list-style: none;
-    float: right; }
-    .top-nav ul li {
-      float: left;
-      padding-right: 1em; }
-
-nav ul a {
-  text-decoration: none; }
-
-header {
-  background: #00205B;
-  color: white;
-  margin-left: -0.5em;
-  margin-right: -0.5em;
-  padding: 2em 0.5em;
-  display: block; }
-  header::after {
-    clear: both;
-    content: "";
-    display: table; }
-  header .logo {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 6.17215%; }
-    header .logo:last-child {
-      margin-right: 0; }
-    header .logo img {
-      max-width: 80px; }
-    @media screen and (max-width: 640px) {
-      header .logo {
-        float: left;
-        display: block;
-        margin-right: 3.57866%;
-        width: 100%;
-        text-align: center; }
-        header .logo:last-child {
-          margin-right: 0; } }
-  header .search {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%;
-    padding: 0.5em 2em 0 0; }
-    header .search:last-child {
-      margin-right: 0; }
-    header .search input {
-      color: #131313; }
-    header .search label {
-      display: block; }
-    header .search div {
-      width: 100%;
-      height: 2.5em; }
-    header .search div button, header .search div input {
-      float: left;
-      display: block; }
-    header .search div input {
-      width: 100%;
-      padding-right: 2.5em; }
-    header .search div button {
-      margin-left: -2.5em;
-      height: 2.5em;
-      width: 2.5em;
-      border: 1px solid #00205B;
-      border-radius: 0;
-      border-bottom-right-radius: 4px;
-      border-top-right-radius: 4px;
-      border-left-width: 2px;
-      background: white;
-      color: #00205B;
-      -webkit-transition: all 0.1s ease-in-out;
-      -moz-transition: all 0.1s ease-in-out;
-      transition: all 0.1s ease-in-out;
-      margin-right: 0; }
-    header .search div button:hover {
-      background: #C8102E;
-      color: white; }
-    @media screen and (max-width: 640px) {
-      header .search {
-        float: left;
-        display: block;
-        margin-right: 3.57866%;
-        width: 100%; }
-        header .search:last-child {
-          margin-right: 0; } }
-  header .quick-links {
-    padding-left: 2em;
-    border-left: 1px solid white;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-right: 0; }
-    header .quick-links:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 640px) {
-      header .quick-links {
-        float: left;
-        display: block;
-        margin-right: 3.57866%;
-        width: 100%;
-        border-left: 0;
-        border-top: 1px solid white; }
-        header .quick-links:last-child {
-          margin-right: 0; } }
-    header .quick-links h3 {
-      margin-top: 0.5em; }
-
-footer {
-  background: #00205B;
-  color: white;
-  margin-left: -0.5em;
-  margin-right: -0.5em;
-  padding: 0.5em;
-  display: block; }
-  footer::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+scss/_type.scss:63
+scss/app.scss:9
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:637:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:707:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:657:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:638:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:707:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:657:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:646:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:638:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:631:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:656:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:309:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...me ease-in-out)\": expected \"{\", was \";\"\A         on line 63 of scss/_type.scss\A         from line 9 of scss/app.scss\A \A 58: .linked-list {\A 59: 	li {\A 60: 		border-bottom: 1px solid $light-gray;\A 61: <<<<<<< HEAD\A 62: =======\A 63: 		@include transition(border $trans-time ease-in-out);\A 64: >>>>>>> master\A 65: 	}\A 66: 	li:hover {\A 67: 		border-color: $red;\A 68: 	}"; }

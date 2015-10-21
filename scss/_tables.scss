@@ -20,10 +20,10 @@ table {
 	}
 	tbody {
 		tr:nth-of-type(2n+1){
-			background: #f8f8f8;
+			background: $off-white;
 		}
 		tr:hover, tbody tr:nth-of-type(2n+1):hover, tr:hover a, tbody tr:nth-of-type(2n+1):hover a {
-			background: $blue;
+			background: $cool-gray;
 			color: white;
 		}
 	}

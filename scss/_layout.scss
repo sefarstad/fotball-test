@@ -1,38 +1,55 @@
 body {
-	padding: 0 0.5em;
+	padding: 0 0.875em;
 }
 
-.content, nav, header section, hr{
-	@include outer-container(1024px);
+.row, nav, header section, hr{
+	@include outer-container(1200px);
 }
 
-.content{
+.row{
 	article {
 		@include span-columns(4);
 	}
 }
-.first-row article{
-    @include media($xtrasmall){
+.first-row article {
+	div {
+		@include span-columns(6 of 8);
+	}
+	div:last-child {
+		@include span-columns(2 of 8);
+		img {
+			max-width: 3.75em;
+		}
+	}
+	@include media($medium){
         @include span-columns(4);
     }
-}
-.second-row article{
-    @include media($medium){
-        @include span-columns(4);
+    @include media($small){
+        @include span-columns(8);
     }
 }
-.second-row article:nth-child(2){
+.first-row article:nth-child(2) {
 	@include media($medium){
 		@include omega();
 	}
 }
+.news-row article{
+    @include media($medium){
+        @include span-columns(4);
+    }
+    @include media($xtrasmall){
+        @include span-columns(4);
+    }
+}
+.news-row article:nth-child(2){
+	@include media($medium){
+		@include omega();
+	}
+}
+.linked-boxes article {
+	@include media($medium){
+		@include span-columns(8);
+		margin-bottom: 2em;
+	}
+}
 
-hr {
-	margin: 2em auto;
-	border-bottom: 1px solid $light-gray;
-	border-top: none;
-}
-img {
-	width: 100%;
-	height: auto;
-}
