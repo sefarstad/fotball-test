@@ -21,7 +21,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 	text-decoration: none;
 }
 
-h1 {
+h1, .h1-size {
 	font-size: 2em;
 	line-height: 1.25em;
 }
@@ -55,8 +55,31 @@ a:focus {
 	outline-color: $blue;
 }
 
+.linked-list {
+	li {
+		border-bottom: 1px solid $light-gray;
+		@include transition(border $trans-time ease-in-out);
+	}
+	li:hover {
+		border-color: $red;
+	}
+	li a:hover {
+	text-decoration: none;
+	}
+	li a {
+		text-decoration: none;
+		display: block;
+		padding: 0.375em 0;
+	}
+}
+
+
 .small-text {
 	font-size: 0.875em;
+}
+.fine-text {
+	font-size: 0.75em;
+	color: $cool-gray;
 }
 
 .lead {
@@ -68,6 +91,24 @@ a:focus {
 .right-text {
 	text-align: right;
 }
+
+
+//Special cases
+.first-row {
+	h2 {
+		margin: 0;
+	}
+}
+.news-row {
+	h2 {
+		margin-bottom: 0;
+	}
+	p.fine-text {
+    	margin-top: 0;
+	}
+}
+
+
 
 .visuallyhidden {
   border: 0;
