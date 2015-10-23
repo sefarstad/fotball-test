@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 47.3 47.3" style="enable-background:new 0 0 47.3 47.3;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#00205B;}
-</style>
-<g>
-	<path class="st0" d="M14.1,29.6L0,43.7l3.5,3.5l14.1-14.1C16.3,32.1,15.2,30.9,14.1,29.6z"/>
-	<path class="st0" d="M30.1,0c-9.5,0-17.2,7.7-17.2,17.2s7.7,17.2,17.2,17.2s17.2-7.7,17.2-17.2S39.5,0,30.1,0z M30.1,29.4
-		c-6.7,0-12.2-5.5-12.2-12.2S23.3,5,30.1,5s12.2,5.5,12.2,12.2S36.8,29.4,30.1,29.4z"/>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Magnifier</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icon-Set-Example" sketch:type="MSArtboardGroup" transform="translate(-99.000000, -75.000000)" fill="#00205B">
+            <g id="Search-24" sketch:type="MSLayerGroup" transform="translate(96.000000, 72.000000)">
+                <path d="M13.7577259,15.9069306 L20.3360766,22.4852814 L22.4852814,20.3360766 L15.9069306,13.7577259 C16.5989976,12.6721016 17,11.3828804 17,10 C17,6.13400675 13.8659932,3 10,3 C6.13400675,3 3,6.13400675 3,10 C3,13.8659932 6.13400675,17 10,17 C11.3828804,17 12.6721016,16.5989976 13.7577259,15.9069306 L13.7577259,15.9069306 Z M10,15 C7.23857625,15 5,12.7614237 5,10 C5,7.23857625 7.23857625,5 10,5 C12.7614237,5 15,7.23857625 15,10 C15,12.7614237 12.7614237,15 10,15 Z" id="Magnifier" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
 </svg>

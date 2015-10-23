@@ -18,7 +18,7 @@ body {
 	div:last-child {
 		@include span-columns(2 of 8);
 		img {
-			max-width: 3.75em;
+			max-width: 3.45em;
 		}
 	}
 	@include media($medium){

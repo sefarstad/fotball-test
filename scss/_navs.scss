@@ -108,7 +108,8 @@ header {
 		top: 0.75em;
 		width: 1.3em;
 		height: 1.3em;
-		background: url("../img/star.svg");
+		background-image: url("../img/star.svg");
+		background-size: 100% 100%;
 		@include media($small) {
 			left: 0.4em;
 		}
